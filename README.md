@@ -20,7 +20,9 @@ To split the files, we use the following [Python-script](/split_file.py). Make s
 The data is loaded using a batch insert process. Here's how it works: I load 1 million rows at a time. If the data types match the schema I’ve set up, I continue with the next batch of rows. But if there's an error (e.g., the data type doesn’t match), I modify the table's column type (usually to nvarchar, since it can handle all kinds of data).
 
 <img src="/assets/old database diagram.png" alt="Diagram 1" width="500">
+
 This is the database diagram before we restructure it. You can use the script to create table and load data [here](/Load_data.sql)
+
 ## 3. Clean Data
 
 
