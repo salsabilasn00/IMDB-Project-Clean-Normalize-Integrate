@@ -1,15 +1,15 @@
-# IMDB-Project-Clean-Normalize-Integrate
+# IMDb Non Commercial Dataset Project 
 In this project, I process open-source data from IMDb, which has tens of millions of rows in each table, creating a database with a cleaner schema, after performing data cleaning and normalization.
 ## Table of Contents
-1. [Split Files](#1-split-files)
+1. [Split Files](#1-split-files):
     Break down large datasets into smaller files with a maximum of 1 million rows per file for better manageability.
-2. [Load Data to SQL Server](#2-load-data-to-sql-server)
+2. [Load Data to SQL Server](#2-load-data-to-sql-server): 
     Import the split files into SQL Server using batch insert for efficient data loading.
-3. [Clean Data](#3-clean-data)
+3. [Clean Data](#3-clean-data): 
     Perform cleaning operations, such as removing unnecessary characters, handling missing values, and standardizing formats.
-4. [Normalize Data](#4-normalize-data)
+4. [Normalize Data](#4-normalize-data): 
     Apply normalization techniques to reduce redundancies and improve data structure integrity.
-5. [Design a New Schema](#5-design-a-new-schema)
+5. [Design a New Schema](#5-design-a-new-schema): 
     Create a new schema by restructuring tables, adding new columns, and aligning the design for optimal usability.
 
 ## 1. Split Files
@@ -19,7 +19,8 @@ To split the files, we use the following [Python-script](/split_file.py). Make s
 ## 2. Load Data to SQL Server
 The data is loaded using a batch insert process. Here's how it works: I load 1 million rows at a time. If the data types match the schema I’ve set up, I continue with the next batch of rows. But if there's an error (e.g., the data type doesn’t match), I modify the table's column type (usually to nvarchar, since it can handle all kinds of data).
 
-You can find the batch insert process [here](/Load_data.sql)
+<img src="/assets/old database diagram.png" alt="Diagram 1" width="500">
+This is the database diagram before we restructure it. You can use the script to create table and load data [here](/Load_data.sql)
 ## 3. Clean Data
 
 
