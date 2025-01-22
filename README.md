@@ -1,5 +1,7 @@
 # IMDb Non Commercial Dataset Project 
 In this project, I process Non Commercial Dataset from IMDb, which has tens of millions of rows in each table, creating a database with a cleaner schema, after performing data cleaning and normalization.
+
+- data source : 
 ## Table of Contents
 1. [Split Files](#1-split-files):
     Break down large datasets into smaller files with a maximum of 1 million rows per file for better manageability.
@@ -35,6 +37,7 @@ I am performing 1NF normalization by addressing multivalued attributes and creat
 ## 5. New Schema
 Here is the final schema after the normalization and cleaning process, without the addition of external data.
 
-<img src="/assets/New database diagram.png" alt="Diagram 1" width="800">
+<img src="/assets/up diagram.png" alt="Diagram 1" width="900">
+<img src="/assets/down diagram.png.png" alt="Diagram 1" width="900">
 
  Next, I want to develop this schema by adding new data. As you can see in the TITLE_AKAS table, there are columns for Region and Language, which contain country codes according to the ISO 3166-1 alpha-2 standard and language codes according to the ISO 639-1 standard. I want to create new tables for both Region and Language, with the codes as the primary keys. Additionally, I will add a "Name" column, which will store the full name of the region or language to make the data more comprehensible.
