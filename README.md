@@ -38,6 +38,6 @@ I am performing 1NF normalization by addressing multivalued attributes and creat
 Here is the final schema after the normalization and cleaning process, without the addition of external data.
 
 <img src="/assets/up diagram.png" alt="Diagram 1" width="900">
-<img src="/assets/down diagram.png.png" alt="Diagram 1" width="900">
+<img src="/assets/down diagram.png" alt="Diagram 1" width="900">
 
  Next, I want to develop this schema by adding new data. As you can see in the TITLE_AKAS table, there are columns for Region and Language, which contain country codes according to the ISO 3166-1 alpha-2 standard and language codes according to the ISO 639-1 standard. I want to create new tables for both Region and Language, with the codes as the primary keys. Additionally, I will add a "Name" column, which will store the full name of the region or language to make the data more comprehensible.
